@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>RM1 campaign</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="upPage" id="rightPage">
+    <div>
+      <div class="imageStyle">
+        <img src="images/iium_logo.png" alt="iium_logo" />
+      </div>
+      <h1 id="programName">RM1 PROGRAM
+      </h1>
+      <div class="imageStyle">
+        <img src="images/donate_logo.png" alt="donate_logo" />
+      </div>
+    </div>
+    <div>
+      <p>
+        <p class="font1">
+          Let your contributions be
+        </p>
+        <p class="font2">
+          perpetual
+        </p>
+        <p class="font1">
+          for the pleasure of Allah swt
+        </p>
+      </p>
+      <p id="verse" class="font_verse">
+        “The example of those who spend their wealth in the way of Allah is like
+        a<br />
+        seed [of grain] which grows seven spikes;<br />
+        in each spike is a hundred grains.<br />
+        And Allah multiplies [His reward] for whom He wills.<br />
+        And Allah is all-Encompassing and Knowing.”<br />
+        Al Baqarah:261
+      </p>
+    </div>
+  </div>
+    <div class="upPage" id="leftPage">
+      <div class="imageStyle">
+        <img src="images/contact_us.png" alt="contact us"/>
+        <p>
+          IIUM ENDOWMENT FUND<br>
+          Level 3, Rectory<br>
+          International Islamic University Malaysia<br>
+          P.O Box 10<br>
+          50728 Kuala Lumpur<br>
+          Tel:03 6196 4268<br>
+          Email:ief@iium.edu.my<br>
+          Website:www.iium.edu.my/ief
+        </p>
+      </div>
+    </div>
+    <div class="belowPage">
+      <p>Director<br>
+        IIUM Endowment Fund<br>
+        Level 3, Rectory Building<br>
+        International Islamic University Malaysia<br>
+      </p>
+      <h2>PARTICIPATION IN RM1 CAMPAIGN - MONTHLY SALARY DEDUCTION</h2>
+      <form id="myForm" onsubmit="return validateForm()">
+      <label for="selectOption">Select an option:</label>
+        <select id="selectOption" name="selectOption" onchange="handleOptionChange()">
+            <option value="option1">Default</option>
+            <option value="option2">Kulliyyah Based</option>
+        </select><br>
+      <div id="option1Fields">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required>
+      <br>
+
+      <label for="staffNo">Staff No.:</label><br>
+      <input type="text" id="staffNo" name="staffNo" required>
+      <br>
+
+      <label for="K/C/D/I/O">K/C/D/I/O:</label><br>
+      <input type="text" id="K/C/D/I/O" name="K/C/D/I/O" required>
+      <br>
+
+      <label for="contactNo">Contact No.:</label><br>
+      <input type="text" id="contactNo" name="contactNo" required>
+      <br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required>
+      <br>
+      The above salary deduction will take effect from <input type="month" id="month" name="month" required>
+      (month/year) until
+      <input type="month" id="month" name="month" required>(month/year) or further notice.<br>
+      </div>
+      <div id="option2Fields">
+        for Kulliyyah of <input type="text" id="Kulliyyah" name="Kulliyyah" required><br>
+      </div>
+      <input type="submit" value="Submit">
+      </form>
+      <script>
+        function handleOptionChange() {
+        var selectOption = document.getElementById("selectOption");
+        var option1Fields = document.getElementById("option1Fields");
+        var option2Fields = document.getElementById("option2Fields");
+
+      if (selectOption.value === "option1") {
+      option1Fields.style.display = "block";
+      option2Fields.style.display = "none";
+      } else if (selectOption.value === "option2") {
+      option1Fields.style.display = "block";
+      option2Fields.style.display = "block";
+      }
+      }
+      </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+* {
+  padding: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+body {
+  height: 100vh; /*Ensure the body takes the full height of the viewport */
+  background-image: url("images/quran_background.jpg");
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  display: flex;
+  flex-direction: row;
+  background-color: cadetblue;
+}
+.upPage {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#rightPage {
+  flex-direction: column;
+  text-align: center;
+  order: 2;
+  color: ghostwhite;
+  margin-right: 10px; /* Add a gap from the right side */
+  padding-right: 10px; /* Add padding to the right side */
+  top: 10%;
+  right: 50%;
+}
+#rightPage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50%; /* Position the line at the middle from the right */
+  border-right: 2px solid gray; /* Adjust line thickness and color as needed */
+  height: 120%;
+}
+#leftPage {
+  text-align: center;
+  order: 1;
+  color: rgb(145, 28, 92);
+  margin-top: 250px;
+  margin-right: 180px;
+}
+.belowPage {
+  flex: 2;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* Use absolute positioning */
+  bottom: -130%;
+  /* Position at the bottom */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  /* Adjust for centering */
+}
+#programName {
+  color: green;
+  margin-right: 10px; /* Add a gap from the right side */
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.imageStyle img {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  padding-right: 10px;
+  order: -1;
+}
+.font1 {
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(153, 153, 39);
+}
+
+.font2 {
+  font-size: x-large;
+  font-family: "Arial Black", sans-serif;
+  color: yellow;
+}
+
+.font-verse {
+  font-family: "Courier New", Courier, monospace;
+}
